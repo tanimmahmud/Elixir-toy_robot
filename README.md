@@ -15,7 +15,26 @@ def deps do
 end
 ```
 
+#### Start GenServer
+on Terminal
+```
+iex -S mix
+```
+initialize robot
+
+```
+{:ok, robot} = GenServer.start(ToyRobot.Game.Robot, %{north: 0, east: 0, facing: :north})
+```
+to move robot
+```
+GenServer.call(robot, :move)
+```
+to use Router
+to move
+```
+http post localhost:8080/move
+```
+
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/toy_robot](https://hexdocs.pm/toy_robot).
-

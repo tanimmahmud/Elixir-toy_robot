@@ -8,7 +8,8 @@ defmodule ToyRobot.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      {Plug.Cowboy, scheme: :http, plug: ToyRobot.Router, options: [port: 8080]}
+      {Plug.Cowboy, scheme: :http, plug: ToyRobot.Router, options: [port: 8080]},
+      {ToyRobot.Game.Robot, %{north: 0, east: 0, facing: :north}}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
