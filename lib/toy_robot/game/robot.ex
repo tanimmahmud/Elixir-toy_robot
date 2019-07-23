@@ -25,4 +25,8 @@ defmodule ToyRobot.Game.Robot do
     new_robot = robot |> Robot.turn_right
     {:reply, new_robot, new_robot}
   end
+
+  def handle_call(:report, _from, robot) do
+    {:reply, robot, robot}
+  end
 end
