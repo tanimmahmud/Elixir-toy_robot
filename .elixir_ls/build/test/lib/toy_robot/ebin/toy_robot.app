@@ -1,9 +1,0 @@
-{application,toy_robot,
-             [{applications,[kernel,stdlib,elixir,logger,ex_doc,plug_cowboy]},
-              {description,"toy_robot"},
-              {modules,['Elixir.ToyRobot.Application',
-                        'Elixir.ToyRobot.Game.Robot','Elixir.ToyRobot.Robot',
-                        'Elixir.ToyRobot.Router']},
-              {registered,[]},
-              {vsn,"0.1.0"},
-              {mod,{'Elixir.ToyRobot.Application',[]}}]}.
